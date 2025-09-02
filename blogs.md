@@ -8,7 +8,8 @@ title: Blogs
 
 ### 2025 Sep
 
-- [Introduction](https://shadowkiller33.github.io/blogs/introduction/)<br>
+- [Introduction](https://shadowkiller33.github.io/blogs/introduction/)
 
 
-<br>
+
+
