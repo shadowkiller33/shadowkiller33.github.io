@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /blogs/25fall/index.html
+permalink: /blogs/introduction/index.html
 title: Introduction for Convex Insights
 ---
 

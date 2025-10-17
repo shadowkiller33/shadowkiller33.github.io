@@ -29,7 +29,7 @@ If you are interested in any aspect of me, I am always open to discussions and a
 
 ## Contact & Links
 
-- **Email**: starkshen3333[at]gmail.com; lingfeng.shen[at]bytedance.com
+- **Email**: lshen30[at]jh.edu; lingfeng.shen[at]bytedance.com
 - **GitHub**: [shadowkiller33](https://github.com/shadowkiller33)
 - **Google Scholar**: [Profile](https://scholar.google.com/citations?user=PoSTdLAAAAAJ&hl=en)
 - **Semantic Scholar**: [Profile](https://www.semanticscholar.org/author/Lingfeng-Shen/2121272448?sort=influence)
