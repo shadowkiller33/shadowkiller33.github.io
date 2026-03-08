@@ -8,11 +8,11 @@ layout: page
 
 Here is **Lingfeng Shen (沈凌峰)**.<br>
 
-I am a research scientist at Seed LLM department (Bytedance). I'm currently working on the agentic foundation models. Also, I consider myself a professional trader in options strategies and risk hedging.
+I am a Member of Technical Staff at [Microsoft AI SuperIntelligence](https://microsoft.ai/), and I'm currently working on the agentic foundation models. Before coming to MAI, I was a research scientist at Bytedance Seed, focusing on reasoning, planning and function-call capacities of LLM. Apart from research, I consider myself a professional trader in event-driven trading and risk hedging.
 
 During my time at Johns Hopkins, I worked with [Daniel Khashabi](https://danielkhashabi.com/) and [Philipp Koehn](https://www.cs.jhu.edu/~phi/). Besides, I was fortunate to spend my last year of undergraduate at Tencent AI Lab, mentored by Haiyun Jiang, Lemao Liu and Shuming Shi.
 
-If you are interested in any aspect of me, I am always open to discussions and academic collaborations. Feel free to reach out to me at — **lshen30[at]jh.edu** or **lingfeng.shen[at]bytedance.com**
+If you are interested in any aspect of me, I am always open to discussions and academic collaborations. Feel free to reach out to me at — **lshen30[at]jh.edu** or **lingfengshen[at]microsoft.com**
 
 ---
 
