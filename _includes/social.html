@@ -1,0 +1,11 @@
+{%- comment -%}
+Shared social/contact icons. Wrapped by the caller:
+  * navbar   -> <div class="navbar-brand social">
+  * about    -> <div class="social"><div class="contact-icons">
+{%- endcomment -%}
+{% if site.owner.email %}<a href="mailto:{{ site.owner.email }}" title="Email"><i class="fas fa-envelope"></i></a>{% endif %}
+{% if site.owner.scholar %}<a href="{{ site.owner.scholar }}" title="Google Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>{% endif %}
+{% if site.owner.semantic_scholar %}<a href="{{ site.owner.semantic_scholar }}" title="Semantic Scholar" target="_blank" rel="noopener noreferrer"><i class="ai ai-semantic-scholar"></i></a>{% endif %}
+{% if site.owner.github %}<a href="https://github.com/{{ site.owner.github }}" title="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>{% endif %}
+{% if site.owner.twitter %}<a href="https://twitter.com/{{ site.owner.twitter }}" title="X / Twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>{% endif %}
+{% if site.owner.linkedin %}<a href="https://www.linkedin.com/in/{{ site.owner.linkedin }}" title="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>{% endif %}

@@ -1,17 +1,28 @@
-<div class="navigation-wrapper">
-	<div class="site-name">
-		<a href="{{ site.url }}">{{ site.title }}</a>
-	</div><!-- /.site-name -->
-  {% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
-	<div class="top-navigation">
-		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-		    <ul>
-		        {% for link in site.links %}
-            <li><a href="{{ site.url }}{{ link.url }}" {% if url == link.url %}class="top-navigation-current"{% endif %}>{{ link.title }}</a></li>
-		        {% endfor %}
-		    </ul>
-		</nav>
-	</div><!-- /.top-navigation -->
-</div><!-- /.navigation-wrapper -->
+{% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
+<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+  <div class="container">
 
-<!-- Lastly modified by Hanlin CAI in 2023/05/01 -->
+    <div class="navbar-brand social">
+      {% include social.html %}
+    </div>
+
+    <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar top-bar"></span>
+      <span class="icon-bar middle-bar"></span>
+      <span class="icon-bar bottom-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse text-right" id="navbarNav">
+      <ul class="navbar-nav ml-auto flex-nowrap">
+        {% for link in site.links %}
+        <li class="nav-item{% if url == link.url %} active{% endif %}">
+          <a class="nav-link" href="{{ site.url }}{{ link.url }}">{{ link.title }}{% if url == link.url %}<span class="sr-only">(current)</span>{% endif %}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+</nav>

@@ -2,8 +2,8 @@
 #  BASIC SITE INFO
 # --------------------------------------------------
 title: Lingfeng Shen   # Main site title (appears in browser tab & RSS)
-tagline: Here is personal website of Lingfeng Shen. Research Scientist at Bytedance working on agentic foundation models.  # Optional short tagline, used by some layouts
-description: Research Scientist at Seed LLM department (Bytedance) working on agentic foundation models and emergent behaviors.  # Strongly recommended for SEO & social cards
+tagline: Personal website of Lingfeng Shen, Member of Technical Staff on the MAI SuperIntelligence Team.  # Optional short tagline, used by some layouts
+description: Member of Technical Staff on the MAI SuperIntelligence Team, working on agentic foundation models.  # Strongly recommended for SEO & social cards
 
 # TIP ── For local development you can comment out `url`
 # and build with relative paths. In production you want this set.
@@ -14,16 +14,26 @@ url: https://shadowkiller33.github.io
 # --------------------------------------------------
 owner:
   name: Lingfeng Shen
+  first_name: Lingfeng          # Rendered bold in the homepage title
+  last_name: Shen
+  subtitle: 沈凌峰                 # Small grey line under the homepage title
   avatar: ww.jpg
-  bio: Research Scientist at Bytedance Seed working on agentic foundation models.
-  email: lshen30@jh.edu
+  bio: Member of Technical Staff on the MAI SuperIntelligence Team, working on agentic foundation models.
+  email: lingfengshen@microsoft.com
 
+  # Lines shown in monospace under the profile picture on the homepage.
+  address:
+    - MAI SuperIntelligence Team
+    - Mountain View, CA
+  # Small note under the contact icons at the bottom of the homepage.
+  contact_note: Always open to discussions and academic collaborations.
 
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
+  # Social networking links, shown in the navbar and under the homepage.
   twitter: Lingfeng_nlp
   github: shadowkiller33
   linkedin: lingfeng-shen-674106251
   scholar: https://scholar.google.com/citations?user=PoSTdLAAAAAJ&hl=en
+  semantic_scholar: https://www.semanticscholar.org/author/Lingfeng-Shen/2121272448?sort=influence
 
 
 
@@ -40,13 +50,13 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 #  `external: true` opens the link in a new tab.
 # --------------------------------------------------
 links:
-  - title: About Me
+  - title: About
     url: /
   - title: Publications
     url: /publications/
   - title: Hobbies
     url: /hobbies/
-  - title: Blogs
+  - title: Blog
     url: /blogs/
 
 
@@ -54,7 +64,7 @@ links:
 # --------------------------------------------------
 #  BUILD & RENDERING OPTIONS
 # --------------------------------------------------
-timezone: America/New_York         # IANA time-zone ID (updated for Johns Hopkins area)
+timezone: America/Los_Angeles      # IANA time-zone ID
 future: true                     # Render posts dated in the future
 highlighter: rouge               # Code highlighter; Rouge is default in MM
 # markdown: kramdown             # Jekyll default; uncomment to force
@@ -100,6 +110,7 @@ disqus:
 # --------------------------------------------------
 include: [".htaccess"]           # Files to force-include in the build
 exclude:                         # Folders/files ignored during build
+  - "preview.sh"
   - "lib"
   - "config.rb"
   - "Capfile"

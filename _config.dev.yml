@@ -1,0 +1,8 @@
+# Local preview overrides. Layer this on top of _config.yml so that links and
+# assets resolve against localhost instead of the deployed site:
+#
+#   jekyll serve --config _config.yml,_config.dev.yml
+#
+# Files starting with "_" are never copied into the build output, so this file
+# has no effect on GitHub Pages.
+url: "http://localhost:4000"
