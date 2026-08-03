@@ -282,21 +282,23 @@ table td {
   margin-bottom: 5px;
   margin-top: 5px;
   font-family: monospace;
-  font-size: 0.8rem;
-  line-height: 1.4;
+  /* Sized so the longest affiliation line stays on one line at .profile's
+     width; widen .profile too if a longer line is ever added. */
+  font-size: 0.72rem;
+  line-height: 1.5;
+  white-space: nowrap;
 }
 
+/* One affiliation line per row at every width; combined with the nowrap above
+   this keeps a long line like "MAI SuperIntelligence Team" unbroken. */
 .profile .address p {
-  display: inline-block;
+  display: block;
   margin: 0;
 }
 
 @media (min-width: 480px) {
   .profile {
-    width: 20%;
-  }
-  .profile .address p {
-    display: block;
+    width: 26%;
   }
 }
 
@@ -668,7 +670,10 @@ footer.sticky-bottom a:hover {
     font-size: 2rem;
   }
   .profile {
-    width: 45%;
+    width: 50%;
+  }
+  .profile .address {
+    font-size: 0.68rem;
   }
   .social .contact-icons {
     font-size: 2.6rem;
