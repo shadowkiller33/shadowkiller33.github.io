@@ -11,18 +11,36 @@ If you are interested in chatting about research with me, I am always open to di
 <details>
   <summary>Academic Services</summary>
   <div class="details-content">
-    <p><b>Reviewer</b>: ICLR 2024, NeurIPS 2023/2024, ICML 2023, ACL 2023, AAAI 2022/2023/2024,
-    EMNLP 2022/2023, ARR 2022/2023.</p>
+    <p><b>Reviewer</b>: ICLR 2024&ndash;2026, NeurIPS 2023&ndash;2026, ICML 2023&ndash;2026,
+    ACL 2023, AAAI 2022&ndash;2024, EMNLP 2022&ndash;2023, ARR 2022&ndash;2023.</p>
   </div>
 </details>
 
 ## Research Interests
 
-- **Emergent behaviors of foundation models**, e.g. in-context learning — [paper](https://arxiv.org/abs/2310.08540)
-- **Data-centric design** in building foundation models — [paper](https://arxiv.org/abs/2309.16155v1)
-- **Adversarial robustness** — [paper](https://arxiv.org/abs/2302.02023), [paper](https://ojs.aaai.org/index.php/AAAI/article/view/21380)
-- **Backdoor robustness** — [paper](https://arxiv.org/abs/2201.02993)
-- **Evaluation** of generation models — [paper](https://arxiv.org/abs/2201.02993), [paper](https://arxiv.org/abs/2202.08479)
+- **Proactive agents**
+- **AI for scientific discovery**
+- **Agentic RL**
+
+<details>
+  <summary>Earlier Research Topics</summary>
+  <div class="details-content">
+    <ul>
+      <li><b>Emergent behaviors of foundation models</b>, e.g. in-context learning &mdash;
+        <a href="https://arxiv.org/abs/2310.08540" target="_blank" rel="noopener noreferrer">paper</a></li>
+      <li><b>Data-centric design</b> in building foundation models &mdash;
+        <a href="https://arxiv.org/abs/2309.16155v1" target="_blank" rel="noopener noreferrer">paper</a></li>
+      <li><b>Adversarial robustness</b> &mdash;
+        <a href="https://arxiv.org/abs/2302.02023" target="_blank" rel="noopener noreferrer">paper</a>,
+        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21380" target="_blank" rel="noopener noreferrer">paper</a></li>
+      <li><b>Backdoor robustness</b> &mdash;
+        <a href="https://arxiv.org/abs/2201.02993" target="_blank" rel="noopener noreferrer">paper</a></li>
+      <li><b>Evaluation</b> of generation models &mdash;
+        <a href="https://arxiv.org/abs/2201.02993" target="_blank" rel="noopener noreferrer">paper</a>,
+        <a href="https://arxiv.org/abs/2202.08479" target="_blank" rel="noopener noreferrer">paper</a></li>
+    </ul>
+  </div>
+</details>
 
 <div class="news">
   <h2>Beyond Research</h2>
