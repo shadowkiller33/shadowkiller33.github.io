@@ -86,7 +86,7 @@ subtitle: "* denotes equal contribution. A full list is available on my Google S
   <h2>Research Experience</h2>
   <p><b>Member of Technical Staff</b>, MAI SuperIntelligence Team <span class="date">Current</span></p>
   <p class="note">Agentic foundation models.</p>
-  <p><b>Research Scientist</b>, Seed LLM Department, ByteDance</p>
+  <p><b>Research Scientist</b>, <a href="https://seed.bytedance.com/en/" target="_blank" rel="noopener noreferrer">Seed LLM Department, ByteDance</a></p>
   <p class="note">Reasoning, planning and function-call capacities of LLMs.</p>
   <p><b>Research Assistant</b>, Johns Hopkins University</p>
   <p class="note">Worked with Daniel Khashabi and Philipp Koehn.</p>

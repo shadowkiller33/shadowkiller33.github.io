@@ -2,7 +2,7 @@
 layout: about
 ---
 
-I am a Member of Technical Staff on the [MAI SuperIntelligence Team](https://microsoft.ai/), where I work on agentic foundation models. Before coming to MAI, I was a research scientist at ByteDance Seed, focusing on the reasoning, planning and function-call capacities of LLMs. Apart from research, I consider myself a professional trader in event-driven trading and risk hedging.
+I am a Member of Technical Staff on the [MAI SuperIntelligence Team](https://microsoft.ai/), where I work on agentic foundation models. Before coming to MAI, I was a research scientist at [ByteDance Seed](https://seed.bytedance.com/en/), focusing on the reasoning, planning and function-call capacities of LLMs. Apart from research, I consider myself a professional trader in event-driven trading and risk hedging.
 
 During my time at Johns Hopkins, I worked with [Daniel Khashabi](https://danielkhashabi.com/) and [Philipp Koehn](https://www.cs.jhu.edu/~phi/). Besides, I was fortunate to spend my last year of undergraduate at Tencent AI Lab, mentored by Haiyun Jiang, Lemao Liu and Shuming Shi.
 
