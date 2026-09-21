@@ -2,8 +2,8 @@
 #  BASIC SITE INFO
 # --------------------------------------------------
 title: Lingfeng Shen   # Main site title (appears in browser tab & RSS)
-tagline: Personal website of Lingfeng Shen, Member of Technical Staff on the MAI SuperIntelligence Team.  # Optional short tagline, used by some layouts
-description: Member of Technical Staff on the MAI SuperIntelligence Team, working on agentic foundation models.  # Strongly recommended for SEO & social cards
+tagline: Personal website of Lingfeng Shen, Lead Scientist at Apodex.  # Optional short tagline, used by some layouts
+description: Lead Scientist at Apodex, working on AI4Science and reinforcement learning.  # Strongly recommended for SEO & social cards
 
 # TIP ── For local development you can comment out `url`
 # and build with relative paths. In production you want this set.
@@ -18,12 +18,12 @@ owner:
   last_name: Shen
   subtitle: 沈凌峰                 # Small grey line under the homepage title
   avatar: ww.jpg
-  bio: Member of Technical Staff on the MAI SuperIntelligence Team, working on agentic foundation models.
-  email: lingfengshen@microsoft.com
+  bio: Lead Scientist at Apodex, working on AI4Science and reinforcement learning.
+  email: lingfeng@apodex.com
 
   # Lines shown in monospace under the profile picture on the homepage.
   address:
-    - MAI SuperIntelligence Team
+    - Apodex
     - Mountain View, CA
   # Small note under the contact icons at the bottom of the homepage.
   contact_note: Always open to discussions and academic collaborations.

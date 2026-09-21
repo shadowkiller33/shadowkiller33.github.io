@@ -84,7 +84,9 @@ subtitle: "* denotes equal contribution. A full list is available on my Google S
 
 <div class="news">
   <h2>Research Experience</h2>
-  <p><b>Member of Technical Staff</b>, MAI SuperIntelligence Team <span class="date">Current</span></p>
+  <p><b>Lead Scientist</b>, <a href="https://apodex.ai" target="_blank" rel="noopener noreferrer">Apodex</a> <span class="date">Current</span></p>
+  <p class="note">AI4Science and reinforcement learning.</p>
+  <p><b>Member of Technical Staff</b>, MAI SuperIntelligence Team</p>
   <p class="note">Agentic foundation models.</p>
   <p><b>Research Scientist</b>, <a href="https://seed.bytedance.com/en/" target="_blank" rel="noopener noreferrer">Seed LLM Department, ByteDance</a></p>
   <p class="note">Reasoning, planning and function-call capacities of LLMs.</p>
