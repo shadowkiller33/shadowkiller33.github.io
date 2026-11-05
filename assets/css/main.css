@@ -507,7 +507,7 @@ b {
   row-gap: 0;
   padding: 22px 22px 26px;
   border-radius: var(--radius);
-  background: var(--cobalt-soft);
+  background: var(--canvas-2);
 }
 
 @supports not (grid-template-rows: subgrid) {
@@ -517,30 +517,27 @@ b {
   }
 }
 
-.tile-2 {
-  background: var(--coral-soft);
-}
-
-.tile-3 {
-  background: var(--mint-soft);
-}
-
 .tile-index {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   align-self: start;
   margin-bottom: 40px;
-  color: var(--cobalt-deep);
+  color: var(--ink-2);
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.06em;
 }
 
-.tile-2 .tile-index {
-  color: var(--coral-text);
-}
-
-.tile-3 .tile-index {
-  color: var(--mint-deep);
+/* A cobalt bead before the number, echoing the hero artwork */
+.tile-index::before {
+  flex: none;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cobalt);
+  content: "";
 }
 
 .tile-title {
