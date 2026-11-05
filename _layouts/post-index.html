@@ -25,6 +25,9 @@ layout: default
       <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
       <div>
         <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {%- if post.title_zh and post.title_zh != "" %}
+        <p class="post-list-title-zh" lang="zh-CN"><a href="{{ post.url | relative_url }}?lang=zh">{{ post.title_zh }}</a></p>
+        {%- endif %}
         {%- if post.description %}
         <p class="post-list-desc">{{ post.description }}</p>
         {%- endif %}

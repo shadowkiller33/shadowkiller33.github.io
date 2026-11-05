@@ -1,6 +1,104 @@
 ---
 layout: default
 ---
+{%- assign bilingual = false %}
+{%- if page.title_zh and page.title_zh != "" %}{% assign bilingual = true %}{% endif %}
+{%- if bilingual %}
+<article class="wrap page post bilingual" data-title-en="{{ page.title | append: ' · ' | append: site.title | escape }}" data-title-zh="{{ page.title_zh | append: ' · ' | append: site.title | escape }}">
+  <header class="page-header">
+    <p class="eyebrow"><a href="{{ '/blogs/' | relative_url }}">{{ site.blog_title | default: "Blog" }}</a></p>
+    <h1 class="page-title"><span class="lang-en" lang="en">{{ page.title }}</span><span class="lang-zh" lang="zh-CN">{{ page.title_zh }}</span></h1>
+    <div class="post-meta-row">
+      {%- if page.date %}
+      <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"><span class="lang-en">{{ page.date | date: "%B %Y" }}</span><span class="lang-zh" lang="zh-CN">{{ page.date | date: "%Y 年 %-m 月" }}</span></time></p>
+      {%- endif %}
+      <fieldset class="lang-switch">
+        <legend class="visually-hidden">Language / 语言</legend>
+        <input type="radio" name="post-lang" id="post-lang-en" value="en" checked>
+        <label for="post-lang-en" lang="en">English</label>
+        <input type="radio" name="post-lang" id="post-lang-zh" value="zh">
+        <label for="post-lang-zh" lang="zh-CN">中文</label>
+      </fieldset>
+      <button type="button" class="expand-all" aria-expanded="false" hidden>
+        <span class="when-closed"><span class="lang-en">Expand all</span><span class="lang-zh" lang="zh-CN">全部展开</span></span>
+        <span class="when-open"><span class="lang-en">Collapse all</span><span class="lang-zh" lang="zh-CN">全部收起</span></span>
+      </button>
+    </div>
+  </header>
+  <script>
+    (function () {
+      var post = document.currentScript.parentNode;
+      var inputs = post.querySelectorAll('input[name="post-lang"]');
+      function show(lang, remember) {
+        post.setAttribute("data-lang", lang);
+        for (var i = 0; i < inputs.length; i++) inputs[i].checked = inputs[i].value === lang;
+        document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
+        document.title = post.getAttribute(lang === "zh" ? "data-title-zh" : "data-title-en");
+        if (!remember) return;
+        try { localStorage.setItem("post-lang", lang); } catch (e) {}
+        try {
+          var url = new URL(window.location.href);
+          if (lang === "zh") url.searchParams.set("lang", "zh"); else url.searchParams.delete("lang");
+          history.replaceState(null, "", url);
+        } catch (e) {}
+      }
+      var lang = null;
+      try { lang = new URLSearchParams(window.location.search).get("lang"); } catch (e) {}
+      if (lang !== "zh" && lang !== "en") { try { lang = localStorage.getItem("post-lang"); } catch (e) {} }
+      show(lang === "zh" ? "zh" : "en", false);
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].addEventListener("change", function () { show(this.value, true); });
+      }
+
+      // Expand / collapse every section's detail; open them all for printing.
+      document.addEventListener("DOMContentLoaded", function () {
+        var button = post.querySelector(".expand-all");
+        var all = post.querySelectorAll("details.more");
+        if (!button || !all.length) return;
+        button.hidden = false;
+        function current() {
+          var block = post.querySelector(".lang-block.lang-" + (post.getAttribute("data-lang") || "en"));
+          return block ? block.querySelectorAll("details.more") : all;
+        }
+        function sync() {
+          var list = current();
+          var open = list.length > 0;
+          for (var i = 0; i < list.length; i++) if (!list[i].open) { open = false; break; }
+          button.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+        button.addEventListener("click", function () {
+          var expand = button.getAttribute("aria-expanded") !== "true";
+          for (var i = 0; i < all.length; i++) all[i].open = expand;
+          sync();
+        });
+        for (var i = 0; i < all.length; i++) all[i].addEventListener("toggle", sync);
+        for (var j = 0; j < inputs.length; j++) inputs[j].addEventListener("change", sync);
+        var saved = null;
+        window.addEventListener("beforeprint", function () {
+          saved = [];
+          for (var i = 0; i < all.length; i++) { saved.push(all[i].open); all[i].open = true; }
+        });
+        window.addEventListener("afterprint", function () {
+          if (!saved) return;
+          for (var i = 0; i < all.length; i++) all[i].open = saved[i];
+          saved = null;
+        });
+        sync();
+      });
+    })();
+  </script>
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  {%- if page.disclaimer %}
+  <aside class="note"><span class="lang-en">{{ page.disclaimer }}</span><span class="lang-zh" lang="zh-CN">{{ page.disclaimer_zh | default: page.disclaimer }}</span></aside>
+  {%- endif %}
+
+  <p class="back-link"><a href="{{ '/blogs/' | relative_url }}"><span aria-hidden="true">←</span> <span class="lang-en">All posts</span><span class="lang-zh" lang="zh-CN">全部文章</span></a></p>
+</article>
+{%- else %}
 <article class="wrap page post">
   <header class="page-header">
     <p class="eyebrow"><a href="{{ '/blogs/' | relative_url }}">{{ site.blog_title | default: "Blog" }}</a></p>
@@ -20,3 +118,4 @@ layout: default
 
   <p class="back-link"><a href="{{ '/blogs/' | relative_url }}"><span aria-hidden="true">←</span> All posts</a></p>
 </article>
+{%- endif %}
