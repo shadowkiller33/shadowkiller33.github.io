@@ -1,0 +1,12 @@
+{
+  "name": "visit-logger",
+  "private": true,
+  "description": "Records visits to the blog posts on shadowkiller33.github.io in a Cloudflare D1 database.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.157.0"
+  }
+}

@@ -8,3 +8,4 @@
 url: "http://localhost:4000"
 google_analytics: ""
 counter_dev_id: ""
+visit_logger_url: ""

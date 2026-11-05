@@ -1,0 +1,21 @@
+name = "visit-logger"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+
+[vars]
+# Pages allowed to record visits (comma-separated origins).
+ALLOWED_ORIGINS = "https://shadowkiller33.github.io"
+# Keep this in step with visit_logger_retention_days in the site's _config.yml.
+RETENTION_DAYS = "90"
+# Time zone used on the /log page and in the CSV.
+TIME_ZONE = "America/Los_Angeles"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "visit-log"
+# Paste the database_id printed by `npx wrangler d1 create visit-log`.
+database_id = "18b3886b-218e-4f24-b15f-a776c3a2308a"
+
+# Daily clean-up of visits older than RETENTION_DAYS.
+[triggers]
+crons = ["17 11 * * *"]
