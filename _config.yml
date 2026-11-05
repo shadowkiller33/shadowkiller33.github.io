@@ -59,10 +59,10 @@ counter_dev_id: 4c8f7caa-2b55-46cd-a995-2c4633303773
 #  VISIT LOG (optional)
 #  Address of the visit-logger Worker in tools/visit-logger, without a
 #  trailing slash, e.g. https://visit-logger.<name>.workers.dev. Leave it empty
-#  to turn logging off. When set, every blog post records each visit (time, IP
-#  address, rough location, network, page, referrer, browser) and the note under
-#  the post says so. Keep the retention in step with RETENTION_DAYS in
-#  tools/visit-logger/wrangler.toml.
+#  to turn logging off. When set, the homepage and every blog post record each
+#  visit (time, IP address, rough location, network, page, referrer, browser).
+#  The note under each post says so; the homepage shows no notice. Keep the
+#  retention in step with RETENTION_DAYS in tools/visit-logger/wrangler.toml.
 # --------------------------------------------------
 visit_logger_url: "https://visit-logger.lingfeng-shen-blog-visit.workers.dev"
 visit_logger_retention_days: 90

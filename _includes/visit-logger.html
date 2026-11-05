@@ -1,8 +1,11 @@
 {%- comment -%}
-  Records a visit to a blog post with the visit-logger Worker (tools/visit-logger).
-  Turned on by visit_logger_url in _config.yml; renders nothing when it is empty.
+  Records a visit to the homepage or a blog post with the visit-logger Worker
+  (tools/visit-logger). Turned on by visit_logger_url in _config.yml; renders
+  nothing when it is empty, and nothing on other pages.
 {%- endcomment -%}
-{%- if site.visit_logger_url and site.visit_logger_url != "" %}
+{%- assign log_this_page = false %}
+{%- if page.layout == "post" or page.url == "/" %}{% assign log_this_page = true %}{% endif %}
+{%- if site.visit_logger_url and site.visit_logger_url != "" and log_this_page %}
 <script>
   (function () {
     var post = document.querySelector("article.post");
