@@ -1,16 +1,18 @@
 ---
 layout: default
 ---
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
+<article class="wrap page">
+  <header class="page-header">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    {%- endif %}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.subtitle %}
+    <p class="page-subtitle">{{ page.subtitle }}</p>
+    {%- endif %}
   </header>
 
-  <article class="post-content">
+  <div class="{% if page.sections %}sections{% else %}prose{% endif %}">
     {{ content }}
-  </article>
-
-</div>
+  </div>
+</article>

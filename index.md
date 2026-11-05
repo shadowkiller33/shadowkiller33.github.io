@@ -1,52 +1,53 @@
 ---
 layout: about
+selected_only: true
 ---
 
-I am a Lead Scientist at [Apodex](https://apodex.ai), where I work on AI4Science and reinforcement learning. Before joining Apodex, I was a Member of Technical Staff on the [MAI SuperIntelligence Team](https://microsoft.ai/), working on agentic foundation models, and a research scientist at [ByteDance Seed](https://seed.bytedance.com/en/), focusing on the reasoning, planning and function-call capacities of LLMs. Apart from research, I consider myself a professional trader in event-driven trading and risk hedging.
+## About
 
-During my time at Johns Hopkins, I worked with [Daniel Khashabi](https://danielkhashabi.com/) and [Philipp Koehn](https://www.cs.jhu.edu/~phi/). Besides, I was fortunate to spend my last year of undergraduate at Tencent AI Lab, mentored by Haiyun Jiang, Lemao Liu and Shuming Shi.
+I am a Lead Scientist at [Apodex](https://apodex.ai), responsible for our research in reinforcement learning and AI for science.
 
-If you are interested in chatting about research with me, I am always open to discussions and academic collaborations. Feel free to reach out to me at **lshen30[at]jh.edu** or **lingfeng[at]apodex.com**.
+Previously, I was a Member of Technical Staff on Microsoft AI's [MAI Superintelligence Team](https://microsoft.ai/), working on agentic foundation models, and a Research Scientist at [ByteDance Seed](https://seed.bytedance.com/en/), where I focused on reasoning, planning, and function calling in large language models.
 
-<details>
-  <summary>Academic Services</summary>
-  <div class="details-content">
-    <p><b>Reviewer</b>: ICLR 2024&ndash;2026, NeurIPS 2023&ndash;2026, ICML 2023&ndash;2026,
-    ACL 2023, AAAI 2022&ndash;2024, EMNLP 2022&ndash;2023, ARR 2022&ndash;2023.</p>
-  </div>
+I hold an M.S. in Computer Science from Johns Hopkins University, where I worked with [Daniel Khashabi](https://danielkhashabi.com/) and [Philipp Koehn](https://www.cs.jhu.edu/~phi/), and a B.S. in Applied Mathematics from China Agricultural University. I spent my final undergraduate year as a research intern at Tencent AI Lab, mentored by Haiyun Jiang, Lemao Liu, and Shuming Shi.
+
+Beyond research, I am a professional trader focused on event-driven strategies and risk hedging, and I occasionally write about markets on my [blog](/blogs/).
+
+I am always glad to talk about research and collaboration. You can reach me at lingfeng [at] apodex.com or lshen30 [at] jh.edu.
+
+## Research
+
+{% include interests.html %}
+
+<details class="earlier">
+  <summary>Earlier research topics</summary>
+  <ul>
+    <li>Emergent behaviors of foundation models, such as in-context learning <span class="refs">(<a href="https://arxiv.org/abs/2310.08540">ICML 2024</a>)</span></li>
+    <li>Data-centric design of foundation models <span class="refs">(<a href="https://arxiv.org/abs/2309.16155">ICLR 2024</a>)</span></li>
+    <li>Adversarial robustness <span class="refs">(<a href="https://arxiv.org/abs/2302.02023">ICLR 2023</a>, <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21380">AAAI 2022</a>)</span></li>
+    <li>Backdoor robustness and its evaluation <span class="refs">(<a href="https://arxiv.org/abs/2201.02993">arXiv 2022</a>)</span></li>
+    <li>Evaluation metrics for text generation <span class="refs">(<a href="https://arxiv.org/abs/2202.08479">EMNLP 2022</a>)</span></li>
+  </ul>
 </details>
 
-## Research Interests
+## Experience
 
-- **Proactive agents**
-- **AI for scientific discovery**
-- **Agentic RL**
+{% include experience.html %}
 
-<details>
-  <summary>Earlier Research Topics</summary>
-  <div class="details-content">
-    <ul>
-      <li><b>Emergent behaviors of foundation models</b>, e.g. in-context learning &mdash;
-        <a href="https://arxiv.org/abs/2310.08540" target="_blank" rel="noopener noreferrer">paper</a></li>
-      <li><b>Data-centric design</b> in building foundation models &mdash;
-        <a href="https://arxiv.org/abs/2309.16155v1" target="_blank" rel="noopener noreferrer">paper</a></li>
-      <li><b>Adversarial robustness</b> &mdash;
-        <a href="https://arxiv.org/abs/2302.02023" target="_blank" rel="noopener noreferrer">paper</a>,
-        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/21380" target="_blank" rel="noopener noreferrer">paper</a></li>
-      <li><b>Backdoor robustness</b> &mdash;
-        <a href="https://arxiv.org/abs/2201.02993" target="_blank" rel="noopener noreferrer">paper</a></li>
-      <li><b>Evaluation</b> of generation models &mdash;
-        <a href="https://arxiv.org/abs/2201.02993" target="_blank" rel="noopener noreferrer">paper</a>,
-        <a href="https://arxiv.org/abs/2202.08479" target="_blank" rel="noopener noreferrer">paper</a></li>
-    </ul>
-  </div>
-</details>
+## Education
 
-<div class="news">
-  <h2>Beyond Research</h2>
-  <p>Motorsports ignite my passion, particularly Formula 1 — I am ardently devoted to the
-    <a href="https://www.mercedesamgf1.com/" target="_blank" rel="noopener noreferrer">Mercedes-AMG Petronas F1 Team</a>.</p>
-  <p>The NBA also has a special place in my heart; I used to be a big fan of the Houston Rockets.</p>
-  <p>Off the screen, you will often find me karting with friends or playing video games.</p>
-  <p class="note">More on the <a href="{{ site.url }}/hobbies/">hobbies</a> page.</p>
-</div>
+{% include education.html %}
+
+## Publications
+
+{% include publications.html %}
+
+<p class="more-link"><a href="/publications/">All publications <span aria-hidden="true">→</span></a></p>
+
+## Service
+
+{% include service.html %}
+
+## Outside Work
+
+Away from work, I am a devoted Formula 1 fan and support the [Mercedes-AMG Petronas F1 Team](https://www.mercedesamgf1.com/). I also follow the NBA (I used to be a big Houston Rockets fan) and enjoy karting with friends and video games.

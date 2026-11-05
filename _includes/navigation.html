@@ -1,28 +1,19 @@
-{% capture url %}{{ page.url | remove:'index.html' }}{% endcapture %}
-<nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
-  <div class="container">
-
-    <div class="navbar-brand social">
-      {% include social.html %}
-    </div>
-
-    <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar top-bar"></span>
-      <span class="icon-bar middle-bar"></span>
-      <span class="icon-bar bottom-bar"></span>
-    </button>
-
-    <div class="collapse navbar-collapse text-right" id="navbarNav">
-      <ul class="navbar-nav ml-auto flex-nowrap">
-        {% for link in site.links %}
-        <li class="nav-item{% if url == link.url %} active{% endif %}">
-          <a class="nav-link" href="{{ site.url }}{{ link.url }}">{{ link.title }}{% if url == link.url %}<span class="sr-only">(current)</span>{% endif %}</a>
-        </li>
-        {% endfor %}
+{%- assign current = page.url | remove: "index.html" -%}
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.owner.name }}</a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        {%- for link in site.links %}
+        {%- assign is_current = false %}
+        {%- if link.url == "/" %}
+          {%- if current == "/" %}{% assign is_current = true %}{% endif %}
+        {%- elsif current contains link.url %}
+          {%- assign is_current = true %}
+        {%- endif %}
+        <li><a href="{{ link.url | relative_url }}"{% if is_current %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {%- endfor %}
       </ul>
-    </div>
-
+    </nav>
   </div>
-</nav>
+</header>

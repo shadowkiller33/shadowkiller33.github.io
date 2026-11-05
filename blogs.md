@@ -1,14 +1,8 @@
 ---
-layout: page
+layout: post-index
+title: Convex Insights
+eyebrow: Blog
+subtitle: Notes on investment, volatility, and risk.
 permalink: /blogs/index.html
-title: Blog
-subtitle: "Convex Insights — market insights and trading thoughts."
+description: Convex Insights, notes by Lingfeng Shen on investment, volatility, and risk.
 ---
-
-<ul class="post-list">
-  <li>
-    <p class="post-meta">September 2025</p>
-    <div class="title"><a href="{{ site.url }}/blogs/introduction/">Introduction for Convex Insights</a></div>
-    <p class="post-description">What this space is about: options structures, volatility regimes, risk management and the psychology of positioning.</p>
-  </li>
-</ul>

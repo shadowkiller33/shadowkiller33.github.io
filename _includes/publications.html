@@ -1,0 +1,51 @@
+{%- comment -%}
+Publication list rendered from _data/publications.yml (groups of papers).
+  page.selected_only  true -> homepage: only papers marked `selected`, with a small
+                              heading per group, wrapped in one element
+  otherwise           -> Publications page: each group under its own section label,
+                              with full venue names
+{%- endcomment -%}
+{%- if page.selected_only %}{% assign title_tag = "h4" %}{% else %}{% assign title_tag = "h3" %}{% endif -%}
+{%- if page.selected_only %}<div class="pub-groups">{% endif -%}
+{%- for group in site.data.publications %}
+  {%- assign shown = 0 %}
+  {%- for pub in group.papers %}
+    {%- if page.selected_only != true or pub.selected == true %}{% assign shown = shown | plus: 1 %}{% endif %}
+  {%- endfor %}
+  {%- if shown > 0 %}
+    {%- if page.selected_only %}
+  <h3 class="pub-group-title">{{ group.home_title | default: group.group }}</h3>
+    {%- else %}
+<h2 class="label">{{ group.group }}</h2>
+      {%- if group.note %}
+<p class="pub-group-note">{{ group.note }}</p>
+      {%- endif %}
+    {%- endif %}
+<ol class="pub-list">
+    {%- for pub in group.papers %}
+      {%- if page.selected_only and pub.selected != true %}{% continue %}{% endif %}
+  <li class="pub">
+    <{{ title_tag }} class="pub-title">{% if pub.url %}<a href="{{ pub.url | escape }}">{{ pub.title }}</a>{% else %}{{ pub.title }}{% endif %}</{{ title_tag }}>
+    <p class="pub-authors">
+      {%- for author in pub.authors -%}
+        {%- assign author_name = author | remove: "*" -%}
+        {%- if author_name == site.owner.name %}<span class="pub-me">{{ author }}</span>
+        {%- elsif author contains site.owner.name %}{% assign rest = author | remove_first: site.owner.name %}<span class="pub-me">{{ site.owner.name }}</span>{{ rest }}
+        {%- else %}{{ author }}{% endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </p>
+    {%- if page.selected_only != true and pub.venue_full %}
+    <p class="pub-venue-full">{{ pub.venue_full }}</p>
+    {%- endif %}
+    <div class="pub-meta">
+      <span class="badge">{{ pub.venue }}</span>
+      {%- if pub.note %}<span class="badge {% if pub.note == "Oral" %}badge-note{% else %}badge-muted{% endif %}">{{ pub.note }}</span>{% endif %}
+      {%- if pub.url %}<a class="pub-link" href="{{ pub.url | escape }}">{{ pub.link_label | default: "Paper" }} <span aria-hidden="true">↗</span></a>{% endif %}
+    </div>
+  </li>
+    {%- endfor %}
+</ol>
+  {%- endif %}
+{%- endfor %}
+{%- if page.selected_only %}</div>{% endif -%}

@@ -1,43 +1,30 @@
 ---
 layout: default
 ---
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">
-      <span class="font-weight-bold">{{ site.owner.first_name }}</span> {{ site.owner.last_name }}
-    </h1>
-    {% if site.owner.subtitle %}<p class="desc">{{ site.owner.subtitle }}</p>{% endif %}
-  </header>
-
-  <article>
-
-    <div class="profile float-right">
-      <figure>
-        <img src="{{ site.url }}/{{ site.owner.avatar }}" class="img-fluid z-depth-1 rounded"
-             alt="{{ site.owner.name }}">
-      </figure>
-      {% if site.owner.address %}
-      <div class="address">
-        {% for line in site.owner.address %}<p>{{ line }}</p>{% endfor %}
-      </div>
-      {% endif %}
+<section class="wrap hero-wrap">
+  <div class="hero">
+    <div class="hero-text">
+      <p class="eyebrow eyebrow-light">{{ site.owner.job_title }} · {% if site.owner.affiliation_url %}<a href="{{ site.owner.affiliation_url }}">{{ site.owner.affiliation }}</a>{% else %}{{ site.owner.affiliation }}{% endif %}</p>
+      <h1 class="hero-name">{{ site.owner.name }}{% if site.owner.name_zh %} <span class="hero-name-zh" lang="zh-CN">{{ site.owner.name_zh }}</span>{% endif %}</h1>
+      {%- if site.owner.tagline %}
+      <p class="hero-tagline">{{ site.owner.tagline }}</p>
+      {%- endif %}
+      {%- if site.owner.location %}
+      <p class="hero-location">{{ site.owner.location }}</p>
+      {%- endif %}
+      {% include contact-links.html %}
     </div>
-
-    <div class="clearfix">
-      {{ content }}
+    <div class="hero-art">
+      <img class="hero-beads" src="{{ '/assets/img/beads.svg' | relative_url }}" alt="" width="480" height="400">
+      {%- if site.owner.avatar and site.owner.avatar != "" %}
+      <img class="hero-portrait" src="{{ site.owner.avatar | relative_url }}" alt="Owl artwork, avatar of {{ site.owner.name }}" width="400" height="400">
+      {%- endif %}
     </div>
+  </div>
+</section>
 
-    <div class="social">
-      <div class="contact-icons">
-        {% include social.html %}
-      </div>
-      {% if site.owner.contact_note %}
-      <div class="contact-note">{{ site.owner.contact_note }}</div>
-      {% endif %}
-    </div>
-
-  </article>
-
+<div class="wrap">
+  <div class="sections">
+    {{ content }}
+  </div>
 </div>

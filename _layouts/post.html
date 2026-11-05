@@ -1,25 +1,22 @@
 ---
 layout: default
 ---
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
-    {% if page.date %}
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-      {%- if page.modified %} &middot; updated {{ page.modified | date: "%B %-d, %Y" }}{% endif -%}
-    </p>
-    {% endif %}
-    {% if page.tags %}
-    <p class="post-tags">{% for tag in page.tags %}{{ tag }}{% unless forloop.last %} &middot; {% endunless %}{% endfor %}</p>
-    {% endif %}
+<article class="wrap page post">
+  <header class="page-header">
+    <p class="eyebrow"><a href="{{ '/blogs/' | relative_url }}">{{ site.blog_title | default: "Blog" }}</a></p>
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.date %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %Y" }}</time></p>
+    {%- endif %}
   </header>
 
-  <article class="post-content">
+  <div class="prose">
     {{ content }}
-  </article>
+  </div>
 
-</div>
+  {%- if page.disclaimer %}
+  <aside class="note">{{ page.disclaimer }}</aside>
+  {%- endif %}
+
+  <p class="back-link"><a href="{{ '/blogs/' | relative_url }}"><span aria-hidden="true">←</span> All posts</a></p>
+</article>

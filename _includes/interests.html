@@ -1,0 +1,11 @@
+<ul class="tiles">
+{%- for item in site.data.interests %}
+  <li class="tile tile-{{ forloop.index }}">
+    <span class="tile-index">0{{ forloop.index }}</span>
+    <h3 class="tile-title">{{ item.title }}</h3>
+    {%- if item.desc %}
+    <p class="tile-desc">{{ item.desc }}</p>
+    {%- endif %}
+  </li>
+{%- endfor %}
+</ul>

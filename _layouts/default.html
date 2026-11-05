@@ -1,36 +1,15 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
 {% include head.html %}
-
-<script src="https://cdn.counter.dev/script.js" data-id="4c8f7caa-2b55-46cd-a995-2c4633303773" data-utcoffset="8"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5N5JY1E21"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-T5N5JY1E21');
-</script>
 </head>
-
-<body class="fixed-top-nav">
-
-  <header>
-    {% include navigation.html %}
-  </header>
-
-  <div class="container mt-5">
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {% include navigation.html %}
+  <main id="main">
     {{ content }}
-  </div>
-
-  <footer class="fixed-bottom">
-    {% include footer.html %}
-  </footer>
-
-  {% include scripts.html %}
-
+  </main>
+  {% include footer.html %}
+  {% include analytics.html %}
 </body>
 </html>

@@ -1,28 +1,35 @@
 ---
 layout: default
 ---
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    {% if page.subtitle %}<p class="desc">{{ page.subtitle }}</p>{% endif %}
+<article class="wrap page">
+  <header class="page-header">
+    {%- if page.eyebrow %}
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    {%- endif %}
+    <h1 class="page-title">{{ page.title }}</h1>
+    {%- if page.subtitle %}
+    <p class="page-subtitle">{{ page.subtitle }}</p>
+    {%- endif %}
   </header>
 
-  <article>
+  {%- assign intro = content | strip %}
+  {%- if intro != "" %}
+  <div class="prose">
     {{ content }}
+  </div>
+  {%- endif %}
 
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-        <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
-        <div class="title"><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></div>
-        <p class="post-description">
-          {% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | strip_newlines | truncate: 160 }}{% endif %}
-        </p>
-      </li>
-      {% endfor %}
-    </ul>
-  </article>
-
-</div>
+  <ul class="post-list">
+    {%- for post in site.posts %}
+    <li>
+      <time class="post-list-date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+      <div>
+        <h2 class="post-list-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+        {%- if post.description %}
+        <p class="post-list-desc">{{ post.description }}</p>
+        {%- endif %}
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+</article>

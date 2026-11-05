@@ -1,0 +1,20 @@
+<ul class="contact-links">
+  {%- if site.owner.email %}
+  <li><a href="mailto:{{ site.owner.email }}">{% include icons/email.svg %}<span>Email</span></a></li>
+  {%- endif %}
+  {%- if site.owner.scholar %}
+  <li><a href="{{ site.owner.scholar | escape }}">{% include icons/google-scholar.svg %}<span>Google Scholar</span></a></li>
+  {%- endif %}
+  {%- if site.owner.semantic_scholar %}
+  <li><a href="{{ site.owner.semantic_scholar | escape }}">{% include icons/semantic-scholar.svg %}<span>Semantic Scholar</span></a></li>
+  {%- endif %}
+  {%- if site.owner.github %}
+  <li><a href="https://github.com/{{ site.owner.github }}">{% include icons/github.svg %}<span>GitHub</span></a></li>
+  {%- endif %}
+  {%- if site.owner.linkedin %}
+  <li><a href="https://www.linkedin.com/in/{{ site.owner.linkedin }}/">{% include icons/linkedin.svg %}<span>LinkedIn</span></a></li>
+  {%- endif %}
+  {%- if site.owner.twitter %}
+  <li><a href="https://x.com/{{ site.owner.twitter }}">{% include icons/x.svg %}<span>X</span></a></li>
+  {%- endif %}
+</ul>

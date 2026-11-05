@@ -1,85 +1,68 @@
 # --------------------------------------------------
-#  BASIC SITE INFO
+#  SITE
 # --------------------------------------------------
-title: Lingfeng Shen   # Main site title (appears in browser tab & RSS)
-tagline: Personal website of Lingfeng Shen, Lead Scientist at Apodex.  # Optional short tagline, used by some layouts
-description: Lead Scientist at Apodex, working on AI4Science and reinforcement learning.  # Strongly recommended for SEO & social cards
-
-# TIP ── For local development you can comment out `url`
-# and build with relative paths. In production you want this set.
+title: Lingfeng Shen
+description: Lingfeng Shen is a Lead Scientist at Apodex, working on reinforcement learning, agents, and AI for scientific discovery.
 url: https://shadowkiller33.github.io
+baseurl: ""
+lang: en
+timezone: America/Los_Angeles
+blog_title: Convex Insights
+
 
 # --------------------------------------------------
-#  AUTHOR / PROFILE DATA
+#  PROFILE
+#  Shown in the homepage header, the page metadata and the footer.
 # --------------------------------------------------
 owner:
   name: Lingfeng Shen
-  first_name: Lingfeng          # Rendered bold in the homepage title
-  last_name: Shen
-  subtitle: 沈凌峰                 # Small grey line under the homepage title
-  avatar: ww.jpg
-  bio: Lead Scientist at Apodex, working on AI4Science and reinforcement learning.
+  name_zh: 沈凌峰
+  job_title: Lead Scientist
+  affiliation: Apodex
+  affiliation_url: https://apodex.ai
+  location: Mountain View, CA
+  tagline: Reinforcement learning, agents, and AI for scientific discovery.
+
+  # Portrait shown inside the artwork on the homepage. Leave empty to hide it.
+  avatar: images/ww.jpg
+
   email: lingfeng@apodex.com
-
-  # Lines shown in monospace under the profile picture on the homepage.
-  address:
-    - Apodex
-    - Mountain View, CA
-  # Small note under the contact icons at the bottom of the homepage.
-  contact_note: Always open to discussions and academic collaborations.
-
-  # Social networking links, shown in the navbar and under the homepage.
-  twitter: Lingfeng_nlp
-  github: shadowkiller33
-  linkedin: lingfeng-shen-674106251
   scholar: https://scholar.google.com/citations?user=PoSTdLAAAAAJ&hl=en
   semantic_scholar: https://www.semanticscholar.org/author/Lingfeng-Shen/2121272448?sort=influence
-
-
-
-# --------------------------------------------------
-#  SEARCH-ENGINE VERIFICATION & ANALYTICS
-# --------------------------------------------------
-google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
-# bing_verify: ""    # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-# google_analytics: "G-XXXXXXX"                                 # GA-4 property ID
+  github: shadowkiller33
+  linkedin: lingfeng-shen-674106251
+  twitter: Lingfeng_nlp
 
 
 # --------------------------------------------------
-#  TOP NAVIGATION BAR
-#  `external: true` opens the link in a new tab.
+#  TOP NAVIGATION
 # --------------------------------------------------
 links:
   - title: About
     url: /
   - title: Publications
     url: /publications/
-  - title: Hobbies
-    url: /hobbies/
   - title: Blog
     url: /blogs/
 
 
-
 # --------------------------------------------------
-#  BUILD & RENDERING OPTIONS
+#  SEARCH-ENGINE VERIFICATION & ANALYTICS
+#  Leave a value empty to turn that service off.
 # --------------------------------------------------
-timezone: America/Los_Angeles      # IANA time-zone ID
-future: true                     # Render posts dated in the future
-highlighter: rouge               # Code highlighter; Rouge is default in MM
-# markdown: kramdown             # Jekyll default; uncomment to force
-# pygments: true                 # Legacy option (Rouge supersedes this)
+google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
+google_analytics: G-T5N5JY1E21
+counter_dev_id: 4c8f7caa-2b55-46cd-a995-2c4633303773
 
 
 # --------------------------------------------------
-#  PERMALINK STRUCTURE
+#  BUILD
 # --------------------------------------------------
-permalink: /:categories/:title    # e.g. /tech/my-post/
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title
+future: true
 
-
-# --------------------------------------------------
-#  KRAMDOWN (Markdown engine) SETTINGS
-# --------------------------------------------------
 kramdown:
   auto_ids: true
   footnote_nr: 1
@@ -87,49 +70,13 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-  # coderay:
-  #   coderay_line_numbers:
-  #   coderay_line_numbers_start: 1
-  #   coderay_tab_width: 4
-  #   coderay_bold_every: 10
-  #   coderay_css: class
-
-
-# --------------------------------------------------
-#  DISQUS COMMENT SYSTEM
-# --------------------------------------------------
-disqus:
-  shortname: lingfeng
-
-
-# include: [".htaccess"]
-# exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
-
-# --------------------------------------------------
-#  INCLUDE / EXCLUDE Lists
-# --------------------------------------------------
-include: [".htaccess"]           # Files to force-include in the build
-exclude:                         # Folders/files ignored during build
-  - "preview.sh"
-  - "lib"
-  - "config.rb"
-  - "Capfile"
-  - "config"
-  - "log"
-  - "Rakefile"
-  - "Rakefile.rb"
-  - "tmp"
-  - "less"
-  - "minimal-mistakes.sublime-project"
-  - "minimal-mistakes.sublime-workspace"
-
-
-# --------------------------------------------------
-#  OPTIONAL PLUG-INS (uncomment once gems are added)
-# --------------------------------------------------
 plugins:
-  - jekyll-feed          # Auto-generate RSS feed
-  - jekyll-sitemap       # Auto-generate sitemap.xml
-  - jekyll-seo-tag       # Adds SEO meta tags & JSON-LD
-#   - jekyll-picture-tag   # Responsive images & WebP/AVIF
-  # - jekyll-archives      # Year/month archive pages
+  - jekyll-feed      # /feed.xml for blog posts
+  - jekyll-sitemap   # /sitemap.xml
+
+exclude:
+  - preview.sh
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor

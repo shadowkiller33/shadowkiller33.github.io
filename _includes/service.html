@@ -1,0 +1,8 @@
+<div class="service">
+  <p class="service-role">Reviewer</p>
+  <ul class="chips">
+    {%- for item in site.data.service %}
+    <li class="chip"><span class="chip-name">{{ item.venue }}</span><span class="chip-years">{{ item.years }}</span></li>
+    {%- endfor %}
+  </ul>
+</div>

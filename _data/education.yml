@@ -1,0 +1,11 @@
+# Education on the homepage, newest first.
+# `desc` may contain inline HTML.
+
+- title: M.S. in Computer Science
+  org: Johns Hopkins University
+  dates: Aug 2022 – Dec 2023
+  desc: Research with <a href="https://danielkhashabi.com/">Daniel Khashabi</a> and <a href="https://www.cs.jhu.edu/~phi/">Philipp Koehn</a>.
+
+- title: B.S. in Applied Mathematics
+  org: China Agricultural University
+  dates: Sep 2018 – Jun 2022

@@ -1,8 +1,10 @@
-# Local preview overrides. Layer this on top of _config.yml so that links and
-# assets resolve against localhost instead of the deployed site:
+# Local preview overrides, layered on top of _config.yml:
 #
 #   jekyll serve --config _config.yml,_config.dev.yml
 #
-# Files starting with "_" are never copied into the build output, so this file
-# has no effect on GitHub Pages.
+# Points metadata URLs at localhost and switches analytics off so that local
+# previews are not counted as visits. Files starting with "_" are never copied
+# into the build output, so this file has no effect on GitHub Pages.
 url: "http://localhost:4000"
+google_analytics: ""
+counter_dev_id: ""

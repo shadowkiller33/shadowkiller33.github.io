@@ -1,0 +1,25 @@
+# Experience on the homepage, newest first.
+# `desc` may contain inline HTML. Entries whose dates contain "Present" are marked as current.
+
+- title: Lead Scientist
+  org: Apodex
+  url: https://apodex.ai
+  dates: Jul 2026 – Present
+  desc: Focus on reinforcement learning and AI for science.
+
+- title: Member of Technical Staff
+  org: MAI Superintelligence Team, Microsoft AI
+  url: https://microsoft.ai/
+  dates: Jan 2026 – Jul 2026
+  desc: Focus on agentic foundation models.
+
+- title: Research Scientist
+  org: ByteDance Seed
+  url: https://seed.bytedance.com/en/
+  dates: May 2024 – Dec 2025
+  desc: Focus on reasoning, planning, and function calling in large language models.
+
+- title: Research Intern
+  org: Tencent AI Lab
+  dates: Sep 2021 – Jun 2022
+  desc: Mentored by Haiyun Jiang, Lemao Liu, and Shuming Shi.

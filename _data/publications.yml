@@ -1,0 +1,195 @@
+# Publications, grouped as in the CV and listed newest first within each group.
+#
+# Each group has a name, an optional home_title (its heading on the homepage), an
+# optional note (shown on the Publications page) and papers:
+#   title       paper title
+#   authors     your own name is highlighted automatically; "*" marks equal contribution
+#   venue       short label shown as a badge, e.g. ICML 2024
+#   venue_full  full venue name, shown on the Publications page
+#   note        optional second badge; "Oral" is highlighted, anything else is neutral
+#   url         where the title and the link point
+#   link_label  text of the link (default: Paper)
+#   selected    true = also listed on the homepage
+
+- group: Technical reports & open source
+  papers:
+    - title: "MAI-Thinking-1: Building a Hill-Climbing Machine"
+      authors: [Microsoft AI Team]
+      venue: Tech report
+      url: https://microsoft.ai/pdf/mai-thinking-1.pdf
+      link_label: Report
+
+    - title: Seed-OSS Open-Source Models
+      authors: [ByteDance Seed Team]
+      venue: Open source
+      url: https://github.com/ByteDance-Seed/seed-oss
+      link_label: Release
+
+- group: First or co-first author
+  home_title: Machine learning
+  papers:
+    - title: "Position: Do pretrained Transformers Learn In-Context by Gradient Descent?"
+      authors: ["Lingfeng Shen*", "Aayush Mishra*", Daniel Khashabi]
+      venue: ICML 2024
+      venue_full: International Conference on Machine Learning
+      note: Oral
+      url: https://proceedings.mlr.press/v235/shen24d.html
+      selected: true
+
+    - title: The Trickle-down Impact of Reward Inconsistency on RLHF
+      authors: [Lingfeng Shen, Sihao Chen, Linfeng Song, Lifeng Jin, Baolin Peng, Haitao Mi, Daniel Khashabi, Dong Yu]
+      venue: ICLR 2024
+      venue_full: International Conference on Learning Representations
+      url: https://arxiv.org/abs/2309.16155
+      selected: true
+
+    - title: "The Language Barrier: Dissecting Safety Challenges of LLMs in Multilingual Contexts"
+      authors: [Lingfeng Shen, Weiting Tan, Sihao Chen, Yunmo Chen, Jingyu Zhang, Haoran Xu, Boyuan Zheng, Philipp Koehn, Daniel Khashabi]
+      venue: ACL 2024
+      venue_full: "Findings of the Association for Computational Linguistics: ACL 2024"
+      note: Findings
+      url: https://arxiv.org/abs/2401.13136
+      selected: true
+
+    - title: "It Takes Two: On the Seamlessness between Reward and Policy Model in RLHF"
+      authors: ["Taiming Lu*", "Lingfeng Shen*", "Xinyu Yang*", Weiting Tan, Beidi Chen, Huaxiu Yao]
+      venue: ICML 2024
+      venue_full: ICML 2024 Workshop on Foundation Models in the Wild
+      note: Workshop
+      url: https://arxiv.org/abs/2406.07971
+
+    - title: "TextShield: Beyond Successfully Detecting Adversarial Sentences in Text Classification"
+      authors: [Lingfeng Shen, Ze Zhang, Haiyun Jiang, Ying Chen]
+      venue: ICLR 2023
+      venue_full: International Conference on Learning Representations
+      url: https://openreview.net/forum?id=xIWfWvKM7aQ
+
+    - title: Flatness-Aware Prompt Selection Improves Accuracy and Sample Efficiency
+      authors: ["Lingfeng Shen*", "Weiting Tan*", Boyuan Zheng, Daniel Khashabi]
+      venue: EMNLP 2023
+      venue_full: "Findings of the Association for Computational Linguistics: EMNLP 2023"
+      note: Findings
+      url: https://arxiv.org/abs/2305.10713
+
+    - title: "Sen2Pro: A Probabilistic Perspective to Sentence Embedding from Pre-trained Language Model"
+      authors: [Lingfeng Shen, Haiyun Jiang, Lemao Liu, Shuming Shi]
+      venue: ACL 2023
+      venue_full: Workshop on Representation Learning for NLP (RepL4NLP), ACL 2023
+      note: Workshop
+      url: https://aclanthology.org/2023.repl4nlp-1.26/
+
+    - title: Frequency-aware Dimension Selection for Static Word Embedding by Mixed Product Distance
+      authors: [Lingfeng Shen, Haiyun Jiang, Lemao Liu, Ying Chen]
+      venue: arXiv 2023
+      venue_full: arXiv preprint
+      url: https://arxiv.org/abs/2305.07826
+
+    - title: On the Evaluation Metrics for Paraphrase Generation
+      authors: [Lingfeng Shen, Lemao Liu, Haiyun Jiang, Shuming Shi]
+      venue: EMNLP 2022
+      venue_full: Conference on Empirical Methods in Natural Language Processing
+      note: Oral
+      url: https://aclanthology.org/2022.emnlp-main.208/
+      selected: true
+
+    - title: Rethink Stealthy Backdoor Attacks in Natural Language Processing
+      authors: [Lingfeng Shen, Haiyun Jiang, Lemao Liu, Shuming Shi]
+      venue: arXiv 2022
+      venue_full: arXiv preprint
+      url: https://arxiv.org/abs/2201.02993
+
+    - title: "DRCNet: Dynamic Image Restoration Contrastive Network"
+      authors: ["Fei Li*", "Lingfeng Shen*", Yang Mi, Zhenbo Li]
+      venue: ECCV 2022
+      venue_full: European Conference on Computer Vision
+      url: https://www.ecva.net/papers/eccv_2022/papers_ECCV/papers/136790504.pdf
+
+    - title: "KATG: Keyword-Bias-Aware Adversarial Text Generation for Text Classification"
+      authors: [Lingfeng Shen, Shoushan Li, Ying Chen]
+      venue: AAAI 2022
+      venue_full: AAAI Conference on Artificial Intelligence
+      note: Oral
+      url: https://ojs.aaai.org/index.php/AAAI/article/view/21380
+
+- group: Co-author
+  papers:
+    - title: Generalizable End-to-End Tool-Use RL with Synthetic CodeGym
+      authors: [Weihua Du, Hailei Gong, Zhan Ling, Kang Liu, Lingfeng Shen, Xuesong Yao, Yufei Xu, Dingyuan Shi, Yiming Yang, Jiecao Chen]
+      venue: ICLR 2026
+      venue_full: International Conference on Learning Representations
+      url: https://arxiv.org/abs/2509.17325
+
+    - title: "Apodex Discovery: Reality Benchmarks and Environments for Evaluating and Building Discoverative Artificial Intelligence"
+      authors: [Brian Wang, Bin Feng, Xiaoman Pan, "…", Lingfeng Shen, et al.]
+      venue: arXiv 2026
+      venue_full: arXiv preprint
+      url: https://arxiv.org/abs/2608.11341
+
+    - title: "MIR-Bench: Can Your LLM Recognize Complicated Patterns via Many-Shot In-Context Reasoning?"
+      authors: [Kai Yan, Zhan Ling, Kang Liu, Yifan Yang, Ting-Han Fan, Lingfeng Shen, Zhengyin Du, Jiecao Chen]
+      venue: NeurIPS 2025
+      venue_full: Conference on Neural Information Processing Systems, Datasets and Benchmarks Track
+      note: Datasets & Benchmarks
+      url: https://proceedings.neurips.cc/paper_files/paper/2025/hash/796076672b00f54fb01d05a2e5fde363-Abstract-Datasets_and_Benchmarks_Track.html
+
+    - title: Reliable and Responsible Foundation Models
+      authors: [Xinyu Yang, Junlin Han, Rishi Bommasani, "…", Lingfeng Shen, et al.]
+      venue: TMLR 2025
+      venue_full: Transactions on Machine Learning Research
+      note: Survey
+      url: https://mlanthology.org/tmlr/2025/yang2025tmlr-reliable/
+
+    - title: "LongReason: A Synthetic Long-Context Reasoning Benchmark via Context Expansion"
+      authors: [Zhan Ling, Kang Liu, Kai Yan, Yifan Yang, Weijian Lin, Ting-Han Fan, Lingfeng Shen, Zhengyin Du, Jiecao Chen]
+      venue: NAACL 2025
+      venue_full: NAACL 2025 Workshop
+      note: Workshop
+      url: https://arxiv.org/abs/2501.15089
+
+    - title: "DiffNorm: Self-Supervised Normalization for Non-autoregressive Speech-to-Speech Translation"
+      authors: [Weiting Tan, Jingyu Zhang, Lingfeng Shen, Daniel Khashabi, Philipp Koehn]
+      venue: NeurIPS 2024
+      venue_full: Conference on Neural Information Processing Systems
+      url: https://arxiv.org/abs/2405.13274
+
+    - title: "Contrastive Preference Optimization: Pushing the Boundaries of LLM Performance in Machine Translation"
+      authors: [Haoran Xu, Amr Sharaf, Yunmo Chen, Weiting Tan, Lingfeng Shen, Benjamin Van Durme, Kenton Murray, Young Jin Kim]
+      venue: ICML 2024
+      venue_full: International Conference on Machine Learning
+      url: https://arxiv.org/abs/2401.08417
+
+    - title: "AnaloBench: Benchmarking the Identification of Abstract and Long-Context Analogies"
+      authors: [Xiao Ye, Andrew Wang, Jacob Choi, Yining Lu, Shreya Sharma, Lingfeng Shen, Vijay Tiyyala, Nicholas Andrews, Daniel Khashabi]
+      venue: EMNLP 2024
+      venue_full: Conference on Empirical Methods in Natural Language Processing
+      url: https://aclanthology.org/2024.emnlp-main.725/
+
+    - title: "SemStamp: A Semantic Watermark with Paraphrastic Robustness for Text Generation"
+      authors: [Abe Bohan Hou, Jingyu Zhang, Tianxing He, Yichen Wang, Yung-Sung Chuang, Hongwei Wang, Lingfeng Shen, Benjamin Van Durme, Daniel Khashabi, Yulia Tsvetkov]
+      venue: NAACL 2024
+      venue_full: Annual Conference of the North American Chapter of the Association for Computational Linguistics
+      url: https://arxiv.org/abs/2310.03991
+
+    - title: Narrowing the Gap between Zero- and Few-Shot Machine Translation by Matching Styles
+      authors: [Weiting Tan, Haoran Xu, Lingfeng Shen, Shuyue Stella Li, Kenton Murray, Philipp Koehn, Benjamin Van Durme, Yunmo Chen]
+      venue: NAACL 2024
+      venue_full: "Findings of the Association for Computational Linguistics: NAACL 2024"
+      note: Findings
+      url: https://arxiv.org/abs/2311.02310
+
+- group: Quantitative finance
+  note: Sole-author papers, written under the pen name Shaw Dalen.
+  papers:
+    - title: "What Happens When Institutional Liquidity Enters Prediction Markets: Identification, Measurement, and a Synthetic Proof of Concept"
+      authors: ["Lingfeng Shen (as Shaw Dalen)"]
+      venue: arXiv 2026
+      venue_full: arXiv preprint
+      url: https://arxiv.org/abs/2604.10005
+      selected: true
+
+    - title: "Toward Black Scholes for Prediction Markets: A Unified Kernel and Market Maker’s Handbook"
+      authors: ["Lingfeng Shen (as Shaw Dalen)"]
+      venue: arXiv 2025
+      venue_full: arXiv preprint
+      url: https://arxiv.org/abs/2510.15205
+      selected: true

@@ -1,0 +1,10 @@
+# Research interests, shown as tiles on the homepage.
+
+- title: AI for finance
+  desc: Machine learning for financial markets, from forecasting and trading to risk management.
+
+- title: AI for scientific discovery
+  desc: Applying AI to open scientific questions whose answers are not yet known.
+
+- title: Agentic RL
+  desc: Training language-model agents to reason, plan, and use tools through reinforcement learning.
