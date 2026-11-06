@@ -4,7 +4,9 @@
 
 只记录主页和博客文章页，Publications、文章列表等其他页面不记录。禁用 JavaScript 或装了拦截插件的访客不会被记录；常见爬虫会被过滤。超过 90 天的记录每天自动删除。
 
-另外还记录**链接预览**：有人在 LinkedIn、Slack、X、iMessage、WhatsApp 等地方贴出文章链接时，平台的服务器会来取文章的分享图，生成链接卡片。文章的分享图（og:image）是经过这个服务转发的，所以每次取图都会记一条，标成“link preview”，并注明是哪个平台。要注意三点：
+**链接预览**（现在关着）：有人在 LinkedIn、Slack、X、iMessage、WhatsApp 等地方贴出文章链接时，平台的服务器会来取文章的分享图，生成链接卡片。把 `_config.yml` 里的 `visit_logger_previews` 改成 `true`，文章的分享图（og:image）就改为经过这个服务转发，每次取图记一条，标成“link preview”，并注明是哪个平台。
+
+关着的原因：LinkedIn 不显示 workers.dev 地址上的图，打开后 LinkedIn 上的文章卡片会没有图（2026 年 11 月试过）。想打开的话，先给这个服务配一个自己的域名（域名要托管在 Cloudflare），把 `visit_logger_url` 改成新地址，再用 [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) 确认卡片有图。打开后要注意三点：
 
 - 记到的 IP 是平台服务器的，不是分享的人或看到卡片的人。
 - 平台会缓存卡片，同一个链接在几天内被再次分享，可能不会再来取图。
@@ -56,7 +58,7 @@ npx wrangler secret put VIEW_PASSWORD   # 设置查看记录用的密码
 - **关闭记录：** 把 `_config.yml` 里的 `visit_logger_url` 清空。
 - **改保留天数：** 改 `wrangler.toml` 的 `RETENTION_DAYS`，然后重新 `npx wrangler deploy`。
 - **改密码：** 再运行一次 `npx wrangler secret put VIEW_PASSWORD`。
-- **更新服务的代码之后：** 在这个文件夹运行 `npx wrangler deploy`，然后再 push 网站。顺序不能反：网站上的分享图地址指向这个服务，服务没更新就 push，卡片会暂时没有图。
-- **服务出问题时：** 文章卡片会暂时没有图。把 `_config.yml` 里的 `visit_logger_url` 清空，分享图就会改回直接从网站取。
+- **更新服务的代码之后：** 在这个文件夹运行 `npx wrangler deploy`，然后再 push 网站。打开了链接预览时顺序不能反：分享图地址指向这个服务，服务没更新就 push，卡片会暂时没有图。
+- **服务出问题时：** 只影响记录。打开了链接预览的话，文章卡片也会没有图：把 `visit_logger_previews` 改回 `false`，分享图就改回直接从网站取。
 - **页面上的说明：** 主页和文章页都不显示说明。IP 地址属于个人信息，欧盟等地要求告知访客；以后想加回说明，可以写在 `_layouts/post.html` 里。
 - **位置和网络信息的精度：** 来自 Cloudflare，按 IP 推断，只到城市级别；用 VPN 或公司网络的访客会显示 VPN 或公司出口的位置。

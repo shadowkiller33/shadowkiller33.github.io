@@ -12,8 +12,8 @@
 {%- comment -%}
   What a link to this page shows on LinkedIn, X and the like. A blog post shows its bare
   title and, once tools/share-image/make.py has made assets/img/share/<slug>.png, that image.
-  With the visit log on, the image is served through the visit-logger Worker, so each
-  platform that fetches it to build a link card is recorded as a link preview.
+  With visit_logger_previews on, the image is served through the visit-logger Worker, so
+  each platform that fetches it to build a link card is recorded as a link preview.
 {%- endcomment -%}
 {%- assign share_title = page_title %}
 {%- assign share_image_url = "" %}
@@ -25,7 +25,7 @@
   {%- assign share_file = site.static_files | where: "path", share_path | first %}
   {%- if share_file %}
     {%- assign share_image_wide = true %}
-    {%- if site.visit_logger_url and site.visit_logger_url != "" %}
+    {%- if site.visit_logger_previews and site.visit_logger_url and site.visit_logger_url != "" %}
       {%- capture share_image_url %}{{ site.visit_logger_url }}/card.png?s={{ page.slug }}&p={{ page.url | url_encode }}{% endcapture %}
     {%- else %}
       {%- assign share_image_url = share_path | absolute_url %}

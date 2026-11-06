@@ -65,6 +65,11 @@ counter_dev_id: 4c8f7caa-2b55-46cd-a995-2c4633303773
 #  in tools/visit-logger/wrangler.toml.
 # --------------------------------------------------
 visit_logger_url: "https://visit-logger.lingfeng-shen-blog-visit.workers.dev"
+#  When true, a post's share image is served through the visit logger, so each
+#  platform that fetches it for a link card is recorded as a link preview. Off:
+#  LinkedIn shows no image from a workers.dev address. Turn it on only after
+#  giving the Worker a domain of your own (see tools/visit-logger/README.md).
+visit_logger_previews: false
 
 
 # --------------------------------------------------

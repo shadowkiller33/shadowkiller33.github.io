@@ -1,9 +1,10 @@
 // Visit logger for shadowkiller33.github.io (a Cloudflare Worker).
 //
 //   POST /hit       called by the homepage and each post (navigator.sendBeacon); stores one page view
-//   GET  /card.png  a post's share image. The site's og:image points here, so when LinkedIn, Slack,
-//                   X and the like fetch the image to build a link card, the fetch is stored as a
-//                   link preview (lang "preview"), and the image is passed through from the site.
+//   GET  /card.png  a post's share image, passed through from the site. When the site's og:image
+//                   points here (visit_logger_previews in _config.yml), each fetch by LinkedIn,
+//                   Slack, X and the like to build a link card is stored as a link preview
+//                   (lang "preview").
 //   GET  /log       password-protected table of visits (the browser asks for a password;
 //                   any user name works)
 //   GET  /log.csv   the same rows as a CSV download
