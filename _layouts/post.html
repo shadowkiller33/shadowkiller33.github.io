@@ -2,9 +2,6 @@
 layout: default
 ---
 {%- assign bilingual = false %}
-{%- assign visit_log = false %}
-{%- if site.visit_logger_url and site.visit_logger_url != "" %}{% assign visit_log = true %}{% endif %}
-{%- assign log_days = site.visit_logger_retention_days | default: 90 %}
 {%- if page.title_zh and page.title_zh != "" %}{% assign bilingual = true %}{% endif %}
 {%- if bilingual %}
 <article class="wrap page post bilingual" data-title-en="{{ page.title | append: ' · ' | append: site.title | escape }}" data-title-zh="{{ page.title_zh | append: ' · ' | append: site.title | escape }}">
@@ -95,10 +92,6 @@ layout: default
     {{ content }}
   </div>
 
-  {%- if page.disclaimer or visit_log %}
-  <aside class="note"><span class="lang-en">{{ page.disclaimer }}{% if visit_log %} Visits to this blog’s posts are logged, including IP addresses, and deleted after {{ log_days }} days.{% endif %}</span><span class="lang-zh" lang="zh-CN">{{ page.disclaimer_zh | default: page.disclaimer }}{% if visit_log %}本博客会记录文章的访问信息（包括 IP 地址），{{ log_days }} 天后删除。{% endif %}</span></aside>
-  {%- endif %}
-
   <p class="back-link"><a href="{{ '/blogs/' | relative_url }}"><span aria-hidden="true">←</span> <span class="lang-en">All posts</span><span class="lang-zh" lang="zh-CN">全部文章</span></a></p>
 </article>
 {%- else %}
@@ -114,10 +107,6 @@ layout: default
   <div class="prose">
     {{ content }}
   </div>
-
-  {%- if page.disclaimer or visit_log %}
-  <aside class="note">{{ page.disclaimer }}{% if visit_log %} Visits to this blog’s posts are logged, including IP addresses, and deleted after {{ log_days }} days.{% endif %}</aside>
-  {%- endif %}
 
   <p class="back-link"><a href="{{ '/blogs/' | relative_url }}"><span aria-hidden="true">←</span> All posts</a></p>
 </article>

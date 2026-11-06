@@ -5,7 +5,7 @@ compatibility_date = "2026-10-01"
 [vars]
 # Pages allowed to record visits (comma-separated origins).
 ALLOWED_ORIGINS = "https://shadowkiller33.github.io"
-# Keep this in step with visit_logger_retention_days in the site's _config.yml.
+# Days to keep visits; a daily job deletes older ones.
 RETENTION_DAYS = "90"
 # Time zone used on the /log page and in the CSV.
 TIME_ZONE = "America/Los_Angeles"

@@ -48,7 +48,7 @@ npx wrangler secret put VIEW_PASSWORD   # 设置查看记录用的密码
 ## 其他
 
 - **关闭记录：** 把 `_config.yml` 里的 `visit_logger_url` 清空。
-- **改保留天数：** 同时改 `wrangler.toml` 的 `RETENTION_DAYS` 和 `_config.yml` 的 `visit_logger_retention_days`，然后重新 `npx wrangler deploy`。
+- **改保留天数：** 改 `wrangler.toml` 的 `RETENTION_DAYS`，然后重新 `npx wrangler deploy`。
 - **改密码：** 再运行一次 `npx wrangler secret put VIEW_PASSWORD`。
-- **页面上的说明：** 开启记录后，文章底部会多一句说明，告诉读者访问会被记录、多久后删除，文字在 `_layouts/post.html` 里。主页照常记录，但不显示说明。IP 地址属于个人信息，欧盟等地要求告知访客。
+- **页面上的说明：** 主页和文章页都不显示说明。IP 地址属于个人信息，欧盟等地要求告知访客；以后想加回说明，可以写在 `_layouts/post.html` 里。
 - **位置和网络信息的精度：** 来自 Cloudflare，按 IP 推断，只到城市级别；用 VPN 或公司网络的访客会显示 VPN 或公司出口的位置。
