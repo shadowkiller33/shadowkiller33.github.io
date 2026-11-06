@@ -12,15 +12,25 @@
 {%- comment -%}
   What a link to this page shows on LinkedIn, X and the like. A blog post shows its bare
   title and, once tools/share-image/make.py has made assets/img/share/<slug>.png, that image.
+  With the visit log on, the image is served through the visit-logger Worker, so each
+  platform that fetches it to build a link card is recorded as a link preview.
 {%- endcomment -%}
 {%- assign share_title = page_title %}
-{%- assign share_image = site.owner.avatar %}
+{%- assign share_image_url = "" %}
+{%- if site.owner.avatar and site.owner.avatar != "" %}{% assign share_image_url = site.owner.avatar | absolute_url %}{% endif %}
 {%- assign share_image_wide = false %}
 {%- if page.layout == "post" %}
   {%- assign share_title = page.title %}
   {%- capture share_path %}/assets/img/share/{{ page.slug }}.png{% endcapture %}
   {%- assign share_file = site.static_files | where: "path", share_path | first %}
-  {%- if share_file %}{% assign share_image = share_path %}{% assign share_image_wide = true %}{% endif %}
+  {%- if share_file %}
+    {%- assign share_image_wide = true %}
+    {%- if site.visit_logger_url and site.visit_logger_url != "" %}
+      {%- capture share_image_url %}{{ site.visit_logger_url }}/card.png?s={{ page.slug }}&p={{ page.url | url_encode }}{% endcapture %}
+    {%- else %}
+      {%- assign share_image_url = share_path | absolute_url %}
+    {%- endif %}
+  {%- endif %}
 {%- endif %}
 <title>{{ page_title | escape }}</title>
 <meta name="description" content="{{ page_description }}">
@@ -33,8 +43,8 @@
 <meta property="og:description" content="{{ page_description }}">
 <meta property="og:url" content="{{ page_url }}">
 <meta property="og:locale" content="en_US">
-{%- if share_image and share_image != "" %}
-<meta property="og:image" content="{{ share_image | absolute_url }}">
+{%- if share_image_url != "" %}
+<meta property="og:image" content="{{ share_image_url | escape }}">
 {%- if share_image_wide %}
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="627">
