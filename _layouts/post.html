@@ -7,7 +7,11 @@ layout: default
 <article class="wrap page post bilingual" data-title-en="{{ page.title | append: ' · ' | append: site.title | escape }}" data-title-zh="{{ page.title_zh | append: ' · ' | append: site.title | escape }}">
   <header class="page-header">
     <p class="eyebrow"><a href="{{ '/blogs/' | relative_url }}">{{ site.blog_title | default: "Blog" }}</a></p>
-    <h1 class="page-title"><span class="lang-en" lang="en">{{ page.title }}</span><span class="lang-zh" lang="zh-CN">{{ page.title_zh }}</span></h1>
+    {%- comment -%}
+      The Chinese title is drawn by CSS from data-title, so the page's text holds only the
+      English title: LinkedIn and other services that read the page see an English title.
+    {%- endcomment %}
+    <h1 class="page-title"><span class="lang-en" lang="en">{{ page.title }}</span><span class="lang-zh" lang="zh-CN" data-title="{{ page.title_zh | escape }}"></span></h1>
     <div class="post-meta-row">
       {%- if page.date %}
       <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}"><span class="lang-en">{{ page.date | date: "%B %Y" }}</span><span class="lang-zh" lang="zh-CN">{{ page.date | date: "%Y 年 %-m 月" }}</span></time></p>

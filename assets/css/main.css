@@ -1269,6 +1269,12 @@ details.earlier li::marker {
   letter-spacing: 0;
 }
 
+/* The post layout puts the Chinese title in data-title instead of the text,
+   so services that read the page (LinkedIn, for one) find only the English title. */
+.page-title .lang-zh::before {
+  content: attr(data-title);
+}
+
 @media (min-width: 641px) {
   .page-title .lang-zh {
     word-break: keep-all;
