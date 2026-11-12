@@ -11,20 +11,6 @@
 #   link_label  text of the link (default: Paper)
 #   selected    true = also listed on the homepage
 
-- group: Technical reports & open source
-  papers:
-    - title: "MAI-Thinking-1: Building a Hill-Climbing Machine"
-      authors: [Microsoft AI Team]
-      venue: Tech report
-      url: https://microsoft.ai/pdf/mai-thinking-1.pdf
-      link_label: Report
-
-    - title: Seed-OSS Open-Source Models
-      authors: [ByteDance Seed Team]
-      venue: Open source
-      url: https://github.com/ByteDance-Seed/seed-oss
-      link_label: Release
-
 - group: First or co-first author
   home_title: Machine learning
   papers:
